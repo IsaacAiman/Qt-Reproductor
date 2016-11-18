@@ -39,13 +39,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     //Populate grid layout
-    lytMain_->addWidget(videoWidget_,  0, 0, 1, 5);
-    lytMain_->addWidget(playerSlider_, 1, 0, 1, 5);
-    lytMain_->addWidget(btnOpen_,      2, 0, 1, 1);
-    lytMain_->addWidget(btnPlay_,      2, 1, 1, 1);
-    lytMain_->addWidget(btnPause_,     2, 2, 1, 1);
-    lytMain_->addWidget(btnStop_,      2, 3, 1, 1);
-    lytMain_->addWidget(volumeSlider_, 2, 4, 1, 1);
+    lytMain_->addWidget(menu_, 0,0,1,5);
+    lytMain_->addWidget(videoWidget_,  1, 0, 1, 5);
+    lytMain_->addWidget(playerSlider_, 2, 0, 1, 5);
+    lytMain_->addWidget(btnOpen_,      3, 0, 1, 1);
+    lytMain_->addWidget(btnPlay_,      3, 1, 1, 1);
+    lytMain_->addWidget(btnPause_,     3, 2, 1, 1);
+    lytMain_->addWidget(btnStop_,      3, 3, 1, 1);
+    lytMain_->addWidget(volumeSlider_, 3, 4, 1, 1);
     //lytMain_->addWidget(videoWidget_,  2, 2, 1, 5);
 
     //Buttons icons
@@ -170,10 +171,4 @@ void MainWindow::metadatos(){
     wgtSecondary_ = new QWidget;
     wgtSecondary_->setWindowTitle("new Window");
     lytMain_->addWidget(wgtSecondary_,  0, 6, 1, 30);
-
-
-    QLabel *label = new QLabel(this);
-    label->setText("Random String");
-    layout->addWidget(label);
-    setLayout(layout);
 }
